@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lelei Enhanced Form </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header, main, footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      background: #004080;
+      color: white;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 8px 0 4px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    button {
+      background: #004080;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #003060;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #444;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lelei Enhanced HTML5 Form </h1>
+    <p>Demonstrating lists, tables, media, and form best practices</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Instructions</h2>
+      <ul>
+        <li>Fill in all <strong>required</strong> fields.</li>
+        <li>Use proper formats (e.g. email, date).</li>
+        <li>Some fields are prefilled and <em>readonly</em>.</li>
+        <li>Submit the form when ready.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price (ksh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Organic Rice</td>
+            <td>Grains</td>
+            <td>100.00</td>
+          </tr>
+          <tr>
+            <td>Fresh Maize</td>
+            <td>Cereals</td>
+            <td>180.00</td>
+          </tr>
+          <tr>
+            <td>Wheat Flour</td>
+            <td>Bakery</td>
+            <td>230.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Lelei Sample Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/800x400.png?text=Sample+Image" alt="Sample placeholder image">
+        <figcaption>Lelei embedded media (image).</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Customer Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Lelei" required>
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="ilesh@email.com" required>
+
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254724830868" pattern="^\+?\d{10,15}$" required>
+
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="customerID">Customer ID (readonly)</label>
+          <input type="text" id="customerID" name="customerID" value="CUST-2025-001" readonly>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="product">Favorite Product</label>
+          <select id="product" name="product">
+            <option value="">--Select--</option>
+            <option value="rice">Organic Rice</option>
+            <option value="maize">Fresh Maize</option>
+            <option value="flour">Wheat Flour</option>
+          </select>
+
+          <label>Newsletter Subscription *</label>
+          <input type="radio" id="subscribeYes" name="newsletter" value="yes" required>
+          <label for="subscribeYes">Yes</label>
+          <input type="radio" id="subscribeNo" name="newsletter" value="no">
+          <label for="subscribeNo">No</label>
+
+          <label for="feedback">Additional Feedback</label>
+          <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your comments..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Security</legend>
+
+          <label for="password">Create Password *</label>
+          <input type="password" id="password" name="password" placeholder="Minimum 6 characters" minlength="6" required>
+
+          <label for="confirmPassword">Confirm Password *</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" minlength="6" required>
+        </fieldset>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced by Ruth Lelei. All rights reserved.</p>
+  </footer>
+</body>
+</html>
